@@ -2,7 +2,7 @@
 
 ## vector
 
-#### No. 209
+#### No. 0209
 
 [website](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84.md)
 
@@ -36,7 +36,7 @@ public:
 
 ## Linked List
 
-#### No. 69
+#### No. 0069
 
 [website](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0024.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.md)
 
@@ -70,7 +70,7 @@ public:
 };
 ```
 
-#### No. 19
+#### No. 0019
 
 [website](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0019.%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E8%8A%82%E7%82%B9.md)
 
@@ -98,6 +98,11 @@ public:
 ```
 ## String
 
-#### No.151
+#### No.0151
 
 [Reverse Words in a String](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0151.%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D.md)
+
+#### No.0028
+
+[KMP](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0028.%E5%AE%9E%E7%8E%B0strStr.md)
+
