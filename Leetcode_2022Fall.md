@@ -110,3 +110,44 @@ public:
 
 [KMP](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0028.%E5%AE%9E%E7%8E%B0strStr.md)
 
+## Stack & Queue
+
+#### No. 0233
+
+[Implement Queue Using Stacks](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0232.%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97.md)
+
+```c++
+class MyQueue {
+public:
+    MyQueue() {
+    }
+    
+    void push(int x) {
+        st1.push(x);
+    }
+    
+    int pop() {
+        int tmp = this->peek();
+        st2.pop();
+        return tmp;
+    }
+    
+    int peek() {
+        if (st2.empty()) {
+            while (!st1.empty()) {
+                st2.push(st1.top());
+                st1.pop();
+            }
+        }
+        return st2.top();
+    }
+    
+    bool empty() {
+        return st1.empty() && st2.empty();
+    }
+private:
+    stack<int> st1; // input stack
+    stack<int> st2; // output stack
+};
+```
+
