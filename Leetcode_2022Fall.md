@@ -110,7 +110,7 @@ public:
 
 [KMP](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0028.%E5%AE%9E%E7%8E%B0strStr.md)
 
-## Stack & Queue
+## Stack & Queue & PQ
 
 #### No. 0233
 
@@ -151,3 +151,37 @@ private:
 };
 ```
 
+#### No. 0072
+
+[Top K Frequent Elements](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0347.%E5%89%8DK%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0.md)
+
+```c++
+class Solution {
+public:
+    class _compare {
+    public:
+        bool operator()(const pair<int,int>& lhs, const pair<int,int> rhs)
+        {
+            return lhs.second > rhs.second;
+        }
+    };    
+    vector<int> topKFrequent(vector<int>& nums, int k) {        
+        // Frequecy
+        unordered_map<int, int> umap;   // frequency
+        for (int num : nums) umap[num]++;        
+        // k minimum heap
+        priority_queue<pair<int,int>, vector<pair<int,int>>, _compare> pq;
+        for (auto pr : umap) {
+            pq.push(pr);
+            if (pq.size() > k) pq.pop();
+        }        
+        // Answer
+        vector<int> ans;
+        while (!pq.empty()) {
+            ans.push_back(pq.top().first);
+            pq.pop();
+        }        
+        return ans;        
+    }
+};
+```
