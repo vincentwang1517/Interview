@@ -102,8 +102,7 @@ public:
 
 ## Stack & Queue & PQ
 #### No. 0071
-[Simplify Path](https://leetcode.com/problems/simplify-path/)
-- File System
+[Simplify Path](https://leetcode.com/problems/simplify-path/) (File System)
 #### No. 0233
 [Implement Queue Using Stacks](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0232.%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97.md)
 ```c++
