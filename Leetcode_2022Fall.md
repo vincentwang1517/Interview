@@ -1,10 +1,10 @@
 ## Important Concepts
 
-#### No. 0072
+#### No.0072
 [Remove Element](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0027.%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.md)
 
 ## vector
-#### No. 0209
+#### No.0209
 [website](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84.md)
 
 ```c++
@@ -36,7 +36,7 @@ public:
 
 
 ## Linked List
-#### No. 0069
+#### No.0069
 [website](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0024.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.md)
 
 ```c++
@@ -69,7 +69,7 @@ public:
 };
 ```
 
-#### No. 0019
+#### No.0019
 [website](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0019.%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E8%8A%82%E7%82%B9.md)
 
 ```c++
@@ -101,9 +101,9 @@ public:
 [KMP](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0028.%E5%AE%9E%E7%8E%B0strStr.md)
 
 ## Stack & Queue & PQ
-#### No. 0071
+#### No.0071
 [Simplify Path](https://leetcode.com/problems/simplify-path/) (File System)
-#### No. 0233
+#### No.0233
 [Implement Queue Using Stacks](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0232.%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97.md)
 ```c++
 class MyQueue {
@@ -139,7 +139,7 @@ private:
     stack<int> st2; // output stack
 };
 ```
-#### No. 0072
+#### No.0072
 
 [Top K Frequent Elements](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0347.%E5%89%8DK%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0.md)
 
@@ -178,9 +178,9 @@ public:
 [Preorder/Inorder/Postorder](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%BB%9F%E4%B8%80%E8%BF%AD%E4%BB%A3%E6%B3%95.md)
 - 當邏輯是 F(node) = F(node->left) + F(node->right)，就可以用 return 來寫
 - Recursion 可用 stack 模仿；當 recursion 帶有 non-reference 參數時，需用另一個同步的 stack 模仿該參數行為
-#### No. 0101
+#### No.0101
 [Symmetric Tree](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0101.%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91.md)
-#### No. 0102
+#### No.0102
 [Binary Tree Level Order](https://leetcode.com/problems/binary-tree-level-order-traversal/submissions/)
 ```c++
 class Solution {
@@ -207,5 +207,5 @@ public:
 };
 ```
 
-[513 Find Bottom Left Tree Value](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0513.%E6%89%BE%E6%A0%91%E5%B7%A6%E4%B8%8B%E8%A7%92%E7%9A%84%E5%80%BC.md)
+[No.0513 Find Bottom Left Tree Value](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0513.%E6%89%BE%E6%A0%91%E5%B7%A6%E4%B8%8B%E8%A7%92%E7%9A%84%E5%80%BC.md)
 
