@@ -206,6 +206,30 @@ public:
     }
 };
 ```
+#### No.0112
+[Path Sum](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0112.%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C.md)
+```c++
+class Solution {
+public:
+    bool hasPathSum(TreeNode* root, int targetSum) 
+    {
+        if (!root) return false;
+        
+        stack<pair<TreeNode*, int>> st;
+        st.push(pair<TreeNode*, int>(root, 0));
+        while (!st.empty()) {
+            TreeNode* cur = st.top().first;
+            int path_sum = st.top().second + cur->val;
+            st.pop();
+            if (!cur->left && !cur->right && path_sum == targetSum) return true;
+            if (cur->left) st.push(make_pair(cur->left, path_sum));
+            if (cur->right) st.push(make_pair(cur->right, path_sum));
+        }
+        
+        return false;
+    }
+};
+```
 
 [No.0513 Find Bottom Left Tree Value](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0513.%E6%89%BE%E6%A0%91%E5%B7%A6%E4%B8%8B%E8%A7%92%E7%9A%84%E5%80%BC.md)
 
