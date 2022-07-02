@@ -177,12 +177,13 @@ public:
 ## Tree
 [Preorder/Inorder/Postorder](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%BB%9F%E4%B8%80%E8%BF%AD%E4%BB%A3%E6%B3%95.md)
 - 當邏輯是 F(node) = F(node->left) + F(node->right)，就可以用 return 來寫
-- Recursion 可用 stack 模仿；當 recursion 帶有 non-reference 參數時，需用另一個同步的 stack 模仿該參數行為
+- Recursion 可用 stack 模仿；當 recursion 帶有 non-reference 參數時，需同步參數 (用另一個 stack / 使用 pair, vector 裝資料)
 #### No.0101
 [Symmetric Tree](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0101.%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91.md)
 #### No.0102
 [Binary Tree Level Order](https://leetcode.com/problems/binary-tree-level-order-traversal/submissions/)
 ```c++
+## Level order traversal with queue
 class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {
@@ -209,6 +210,7 @@ public:
 #### No.0112
 [Path Sum](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0112.%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C.md)
 ```c++
+## 用 stack 取代 recursion (有參數情況)
 class Solution {
 public:
     bool hasPathSum(TreeNode* root, int targetSum) 
