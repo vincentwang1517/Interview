@@ -235,5 +235,41 @@ public:
 };
 ```
 
+#### No.0106
+[Construct Binary Tree from Inorder and Postorder Traversal](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0106.%E4%BB%8E%E4%B8%AD%E5%BA%8F%E4%B8%8E%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91.md)
+```c++
+class Solution {
+public:    
+    unordered_map<int, int> umap;   // (key: val, val: idx)    
+    TreeNode* helper(vector<int>& io, int l1, int r1, vector<int>& po, int l2, int r2)
+    {
+        // [l1, r1)
+        // 切割 inorder 後，能得知左右子樹的 node 數
+        // Postorder 放置方法一定是 [左子樹們, 右子樹們, root]
+        if (l1 >= r1) return nullptr;
+        
+        TreeNode* newnode = new TreeNode (po[r2-1]);
+        
+        //int idx = l1;
+        //for (idx; idx < r1; idx++) {
+        //    if (io[idx] == newnode->val) break;
+        //}
+        int idx = umap[newnode->val]; // The above O(n) operation can be replaced by a umap
+        
+        // 由 inorder 得到左右子樹 node 樹訊息後，即可切割 postorder
+        newnode->right = helper(io, idx+1, r1, po, l2+(idx-l1), r2-1);
+        newnode->left = helper(io, l1, idx, po, l2, l2+(idx-l1));
+        
+        return newnode;
+    }
+    
+    TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) 
+    {
+        for (int i=0; i<inorder.size(); i++) umap[inorder[i]] = i;
+        return helper(inorder, 0, inorder.size(), postorder, 0, postorder.size());
+    }
+};
+```
+
 [No.0513 Find Bottom Left Tree Value](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0513.%E6%89%BE%E6%A0%91%E5%B7%A6%E4%B8%8B%E8%A7%92%E7%9A%84%E5%80%BC.md)
 
