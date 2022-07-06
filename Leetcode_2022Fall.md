@@ -291,5 +291,27 @@ public:
 };
 ```
 
+#### No.0236
+[Lowest Common Ancestor of a Binary Tree](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0236.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88.md)
+```c++
+// Postorder 應用
+class Solution {
+public:
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        if (!root || root == p || root == q) return root;
+        
+        TreeNode* node_l = lowestCommonAncestor(root->left, p, q);
+        TreeNode* node_r = lowestCommonAncestor(root->right, p, q);
+        // node_l, node_r represent a kinf of state
+        // nullptr represents that not found of p/q
+        
+        if (node_l && node_r) return root;
+        else if (node_l) return node_l;
+        else if (node_r) return node_r;
+        else return nullptr;
+    }
+};
+
+
 [No.0513 Find Bottom Left Tree Value](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0513.%E6%89%BE%E6%A0%91%E5%B7%A6%E4%B8%8B%E8%A7%92%E7%9A%84%E5%80%BC.md)
 
