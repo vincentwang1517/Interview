@@ -350,3 +350,43 @@ public:
 
 - 抽象化成樹狀圖
 - for循环横向遍历，递归纵向遍历，回溯不断调整结果集
+
+#### No.0040
+
+[Combination Sum II](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0040.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CII.md)
+
+```c++
+class Solution {
+public:
+    vector<vector<int>> ans;
+    void dfs(vector<int>& cands, int target, int idx_b, vector<int> path)
+    {
+        if (target == 0) {
+            ans.push_back(path);
+            return;
+        }
+        
+        unordered_set<int> used;
+        for (int i=idx_b; i<cands.size(); i++) {
+            // prune
+            if (target - cands[i] < 0) break;   // only available when cands is sorted
+            // dfs
+            if (used.count(cands[i])) continue;
+            else used.insert(cands[i]);
+            
+            path.push_back(cands[i]);
+            dfs(cands, target-cands[i], i+1, path);
+            path.pop_back();
+        }
+        
+        return;
+    }
+    
+    vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
+        sort(candidates.begin(), candidates.end()); // so that can be pruned
+        vector<int> path;
+        dfs(candidates, target, 0, path);
+        return ans;
+    }
+};
+```
